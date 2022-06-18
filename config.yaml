@@ -1,0 +1,14 @@
+domain: 0.0.0.0:8808
+logFile: ./log/caller.log
+tasks:
+  - name: EAP
+    type: eap
+    url: http://localhost:8088
+    httpMethod: POST
+    interval.seconds: 10
+  - name: Test
+    type: demo
+    url: "http://localhost:8088/webservice/QD_SIP/QD_EAP.asmx/HelloWorld"
+    httpMethod: POST
+    interval.seconds: 2
+    
